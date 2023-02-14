@@ -50,6 +50,7 @@ function fn1() {
             .then(response => response.json())
             .then(response => console.log(response))
             .catch(err => console.error(err));
+            console.log(results)
     }
     else if(rd2.checked == true){
         fetch('https://api.foursquare.com/v3/places/search?query=restaurant&limit=5', options)
