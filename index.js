@@ -46,11 +46,14 @@ function fn1() {
     var rd4 = document.getElementById("rd4");
 
     if(rd1.checked == true){
+        let answer;
         fetch('https://api.foursquare.com/v3/places/search?query=coffee&limit=5', options)
             .then(response => response.json())
             .then(response => console.log(response))
+            
             .catch(err => console.error(err));
-            console.log(results)
+        console.log(answer)    
+            
     }
     else if(rd2.checked == true){
         fetch('https://api.foursquare.com/v3/places/search?query=restaurant&limit=5', options)
