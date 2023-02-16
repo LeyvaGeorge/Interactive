@@ -31,7 +31,7 @@ const options = {
   }
 };
 
-fetch(`https://api.foursquare.com/v3/places/search?query=${name}&limit=5`, options)
+fetch(`https://api.foursquare.com/v3/places/search?query=${name}&ll=${userLocation.latitude}%2C${userLocation.longitude}&limit=5`, options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
