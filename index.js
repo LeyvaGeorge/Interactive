@@ -7,7 +7,7 @@ if (navigator.geolocation) {
       latitude: position.coords.latitude,
       longitude: position.coords.longitude
     };
-    //creating a map optional
+
     // ===CREATING A MAP ===
 
     var map = L.map('map').setView([userLocation.latitude, userLocation.longitude], 13);
@@ -60,9 +60,9 @@ function clicked(name){
 }
 
 
-
+{
 // ===Pop up===
-{/*
+/*
 var popup = L.popup();
 
 function onMapClick(e) {
@@ -74,10 +74,13 @@ function onMapClick(e) {
     
 map.on('click', onMapClick);*/
 }
+
 let data;
 
 function graphInfo(info) {
   data = info;
   console.log(data.results[0])
+
+  
 }
 //fourSquare Authorization: 'fsq3MhGrK7xzUkpk7/oiXNnA7yHP36gCcVCiXANq/1dyFDU='
